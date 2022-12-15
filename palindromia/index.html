@@ -5,9 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palindromia</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css' integrity='sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==' crossorigin='anonymous'/>
     <script defer src="script.js"></script>
 </head>
 <body>
+    <div class="row container mt-4">
+        <div class="col-auto">
+        <label for="pali" class="visually-hidden">Inserisci una parola!</label>
+        <input type="text" class="form-control" placeholder="Inserisci una parola!" id="pali">
+      </div>
+      <div class="col-auto">
+        <button type="submit" id="bttn" class="btn btn-primary mb-3">Conferma</button>
+      </div>
+    </div>
+    <h1 id="result"></h1>
     
 </body>
 </html>
