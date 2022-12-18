@@ -12,8 +12,37 @@ Dichiariamo chi ha vinto.
 // * 1. Scriviamo sempre in italiano i passaggi che vogliamo fare
 // * 2. Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.
 
+//Funzioni
+function getRandomNumber(min, max){
+    max++;
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
 //Prendo gli elementi dal DOM
 const form = document.getElementById('pariodispari-form');
-const numberFiedl = document.getElementById('number');
+const numberField = document.getElementById('number');
 const choiceField = document.getElementById('choice');
 const result = document.getElementById('result');
+
+//Eventi
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    //Recupero i dati dal form
+    const userNumber = parseInt(numberField.value.trim());
+    const userChoice = choiceField.value;
+
+    //Validazione
+    if(isNaN(number) || number < 1 || number > 5){
+        alert('NOT VALID');
+        return;
+    }
+
+    if(!userChoice || (userChoice !== 'even' && userChoice !== 'odd')){
+        alert('NOT VALID');
+        return;
+    }
+
+    //Genero numero casuale
+   
+})
