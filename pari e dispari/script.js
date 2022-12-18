@@ -11,3 +11,9 @@ Dichiariamo chi ha vinto.
 //Consigli del giorno
 // * 1. Scriviamo sempre in italiano i passaggi che vogliamo fare
 // * 2. Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.
+
+//Prendo gli elementi dal DOM
+const form = document.getElementById('pariodispari-form');
+const numberFiedl = document.getElementById('number');
+const choiceField = document.getElementById('choice');
+const result = document.getElementById('result');
