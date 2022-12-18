@@ -9,37 +9,18 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <body>
-        <main class="container">
-            <h1 class="text-center">PARI O DISPARI?</h1>
-            <div class="d-flex">
-               <form id="form" class=" w-50  d-flex justify-content-between flex-column my-5 p-5 gap-3">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" id="odd" value="odd">
-                    <label class="form-check-label">
-                        DISPARI
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" id="even" value="even">
-                    <label class="form-check-label">
-                        PARI
-                    </label>
-                </div>
-                <input type="number" class="form-control w-100 text-center fs-5" id="user" max="5"
-                    placeholder="Seleziona un numero tra 1 e 5">
-                <button class="btn btn-primary w-25">GIOCA</button>
-            </form>
-            <div class="d-flex justify-content-between flex-column my-5 p-5 gap-3">
-                <h3 class=" text-center">RISULTATO</h3>
-                <div class="result text-center  d-flex flex-column justify-content-center align-items-center ">
-                    <h1 id="target"></h1>
-                    <h3 id="message"></h3>
-    
-                </div>
-            </div> 
-            </div>
-            
-        </main>
+
+    <section class="mb-5">
+        <h1>Pari o Dispari?</h1>
+        <form id="pariodispari-form" novalidate>
+            <input type="number" id="number" min="1" step="1">
+            <select id="choice">
+                <option value="even">PARI</option>
+                <option value="odd">DISPARI</option>
+            </select>
+            <button type="submit">VAI</button>
+        </form>
+    </section>
+     <div id="result"></div>
 </body>
 </html>
