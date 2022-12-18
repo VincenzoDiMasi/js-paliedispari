@@ -18,6 +18,10 @@ function getRandomNumber(min, max){
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
+function isEven(number){
+    return number % 2 === 0 ? true : false;
+}
+
 //Prendo gli elementi dal DOM
 const form = document.getElementById('pariodispari-form');
 const numberField = document.getElementById('number');
@@ -33,7 +37,7 @@ form.addEventListener('submit', function(event) {
     const userChoice = choiceField.value;
 
     //Validazione
-    if(isNaN(number) || number < 1 || number > 5){
+    if(isNaN(userNumber) || userNumber < 1 || userNumber > 5){
         alert('NOT VALID');
         return;
     }
@@ -43,6 +47,20 @@ form.addEventListener('submit', function(event) {
         return;
     }
 
-    //Genero numero casuale
+    //Genero numero casuale per il CPU
+    const cpuNumber = getRandomNumber(1, 100);
+    // console.log(cpuNumber);
+
+    //Sommo i numeri
+    const sum = userNumber + cpuNumber;
+
+    //Prendo la scelta vincente
+    const rightChoice = isEven(sum) ? 'even' : 'odd';
+
+    //Individuo il vincitore
+    const winner = userChoice === rightChoice ? 'user' : 'CPU';
+
+    //Stampo in pagina
+    result.innerText = winner + 'ha vinto!';
    
 })
